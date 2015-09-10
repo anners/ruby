@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+string = "beer"
+
+puts string
+
+puts string.reverse
+
+array = ["b", "e", "e", "r"]
+
+array.reverse.each do |a|
+	print a
+end
+
+yarra = Array.new
+yarra << array.pop until array.empty?
+
+print yarra
+
+
+
+array = ["b", "e", "e", "r"]
+
+def rev(array)
+  x = array.pop
+  rev(array) if array.length > 0
+  array.unshift x
+end
+
+puts rev(array).inspect 
+
+
+
